@@ -29,12 +29,12 @@ export default function HomePage() {
                 Save the Date
               </h3>
               <p className="text-lg sm:text-xl font-light text-foreground mb-4">
-                December 20, 2025
+                December 16, 2025
               </p>
               
               {/* Countdown Timer */}
               <Countdown 
-                targetDate="2025-12-20T00:00:00+06:00" 
+                targetDate="2025-12-16T00:00:00+06:00" 
                 className="mb-4"
               />
               
