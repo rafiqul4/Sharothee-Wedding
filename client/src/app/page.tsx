@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
+import Countdown from "@/components/Countdown";
 
 export default function HomePage() {
   return (
@@ -24,12 +25,19 @@ export default function HomePage() {
             
             {/* Wedding Date */}
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-6 sm:p-8 max-w-sm sm:max-w-md mx-auto mb-8 sm:mb-12 shadow-xl border border-white/20">
-              <h3 className="text-xl sm:text-2xl font-serif font-semibold text-secondary mb-2">
+              <h3 className="text-xl sm:text-2xl font-serif font-semibold text-secondary mb-4">
                 Save the Date
               </h3>
-              <p className="text-2xl sm:text-3xl font-light text-foreground mb-2">
-                Coming Soon
+              <p className="text-lg sm:text-xl font-light text-foreground mb-4">
+                December 16, 2025
               </p>
+              
+              {/* Countdown Timer */}
+              <Countdown 
+                targetDate="2025-12-16T00:00:00+06:00" 
+                className="mb-4"
+              />
+              
               <p className="text-muted font-medium">
                 Dhaka, Bangladesh
               </p>
