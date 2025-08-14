@@ -79,7 +79,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <div className="w-16 sm:w-20 md:w-24 h-1 bg-primary mx-auto mb-6 sm:mb-8"></div>
-          <p className="text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed text-foreground/90 tracking-[0.015em]">
+          <p className="text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed text-gray-700 tracking-[0.015em]">
             Have questions about our wedding? We&apos;d love to hear from you!
           </p>
         </div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                   <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-secondary mb-4">
                     Message Sent!
                   </h2>
-                  <p className="text-foreground/80 mb-6 text-sm sm:text-base leading-relaxed">
+                  <p className="text-gray-600 mb-6 text-sm sm:text-base leading-relaxed">
                     Thank you for reaching out! We&apos;ll get back to you as soon as possible.
                   </p>
                   <button
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2 tracking-wide">
+                        <label htmlFor="name" className="block text-sm font-semibold text-gray-800 mb-2 tracking-wide">
                           Name *
                         </label>
                         <input
@@ -128,13 +128,13 @@ export default function ContactPage() {
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border-2 border-cream-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                          className="w-full px-4 py-3 border-2 border-cream-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary hover:border-cream-400 transition-all text-gray-800"
                           required
                         />
                       </div>
                       
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2 tracking-wide">
+                        <label htmlFor="email" className="block text-sm font-semibold text-gray-800 mb-2 tracking-wide">
                           Email *
                         </label>
                         <input
@@ -143,14 +143,14 @@ export default function ContactPage() {
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border-2 border-cream-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                          className="w-full px-4 py-3 border-2 border-cream-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary hover:border-cream-400 transition-all text-gray-800"
                           required
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2 tracking-wide">
+                      <label htmlFor="phone" className="block text-sm font-semibold text-gray-800 mb-2 tracking-wide">
                         Phone Number
                       </label>
                       <input
@@ -159,12 +159,12 @@ export default function ContactPage() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-cream-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                        className="w-full px-4 py-3 border-2 border-cream-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary hover:border-cream-400 transition-all text-gray-800"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2 tracking-wide">
+                      <label htmlFor="subject" className="block text-sm font-semibold text-gray-800 mb-2 tracking-wide">
                         Subject *
                       </label>
                       <select
@@ -172,7 +172,7 @@ export default function ContactPage() {
                         name="subject"
                         value={formData.subject}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border-2 border-cream-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                        className="w-full px-4 py-3 border-2 border-cream-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary hover:border-cream-400 transition-all text-gray-800"
                         required
                       >
                         <option value="">Please select a subject</option>
@@ -187,7 +187,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2 tracking-wide">
+                      <label htmlFor="message" className="block text-sm font-semibold text-gray-800 mb-2 tracking-wide">
                         Message *
                       </label>
                       <textarea
@@ -196,7 +196,7 @@ export default function ContactPage() {
                         value={formData.message}
                         onChange={handleChange}
                         rows={5}
-                        className="w-full px-4 py-3 border-2 border-cream-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all resize-vertical"
+                        className="w-full px-4 py-3 border-2 border-cream-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary hover:border-cream-400 transition-all resize-vertical text-gray-800"
                         placeholder="Tell us how we can help you..."
                         required
                       />
@@ -205,7 +205,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-primary hover:bg-primary-dark disabled:bg-gray-400 disabled:cursor-not-allowed text-white py-3 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
+                      className="w-full bg-primary hover:bg-primary-dark focus:bg-primary-dark disabled:bg-gray-400 disabled:cursor-not-allowed text-white py-3 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                     >
                       {isSubmitting ? 'Sending...' : 'Send Message'}
                     </button>
@@ -228,7 +228,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Email</p>
-                      <p className="text-foreground/85 text-sm font-light">contact@inciaandarvins.wedding</p>
+                      <p className="text-gray-600 text-sm font-light">contact@inciaandarvins.wedding</p>
                     </div>
                   </div>
                   
@@ -238,7 +238,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">WhatsApp</p>
-                      <p className="text-foreground/85 text-sm font-light">+880 1234-567890</p>
+                      <p className="text-gray-600 text-sm font-light">+880 1234-567890</p>
                     </div>
                   </div>
                   
@@ -248,7 +248,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Wedding Location</p>
-                      <p className="text-foreground/85 text-sm font-light">Dhaka, Bangladesh</p>
+                      <p className="text-gray-600 text-sm font-light">Dhaka, Bangladesh</p>
                     </div>
                   </div>
                 </div>
@@ -264,17 +264,17 @@ export default function ContactPage() {
                     {contactGroup.people.map((person, personIndex) => (
                       <div key={personIndex} className="border-b border-cream-100 pb-4 last:border-b-0 last:pb-0">
                         <p className="font-medium text-foreground">{person.name}</p>
-                        <p className="text-sm text-foreground/80 mb-2 font-light tracking-wide">{person.role}</p>
+                        <p className="text-sm text-gray-600 mb-2 font-light tracking-wide">{person.role}</p>
                         <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-1 sm:space-y-0 text-sm">
                           <a 
                             href={`tel:${person.phone}`}
-                            className="text-primary hover:underline"
+                            className="text-primary hover:text-primary-dark hover:underline focus:text-primary-dark focus:underline transition-colors"
                           >
                             {person.phone}
                           </a>
                           <a 
                             href={`mailto:${person.email}`}
-                            className="text-primary hover:underline"
+                            className="text-primary hover:text-primary-dark hover:underline focus:text-primary-dark focus:underline transition-colors"
                           >
                             {person.email}
                           </a>
@@ -290,45 +290,45 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 sm:py-20 bg-white/50">
+      <section className="py-16 sm:py-20 bg-gray-50 border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-secondary mb-4 sm:mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-foreground/80 text-sm sm:text-base leading-relaxed tracking-[0.01em]">
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed tracking-[0.01em]">
               Here are some common questions we receive. Don&apos;t see your question? Feel free to contact us!
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="font-semibold text-foreground mb-3">When should I RSVP?</h3>
-              <p className="text-foreground/80 text-sm sm:text-base leading-relaxed">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <h3 className="font-semibold text-gray-800 mb-3">When should I RSVP?</h3>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 Please RSVP as soon as possible, but no later than July 15, 2025. 
                 This helps us finalize catering and seating arrangements.
               </p>
             </div>
             
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="font-semibold text-foreground mb-3">What&apos;s the dress code?</h3>
-              <p className="text-foreground/80 text-sm sm:text-base leading-relaxed">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <h3 className="font-semibold text-gray-800 mb-3">What&apos;s the dress code?</h3>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 We&apos;ll have different dress codes for each event. Detailed information 
                 will be sent with your invitation and is available on our Events page.
               </p>
             </div>
             
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="font-semibold text-foreground mb-3">Can I bring a plus-one?</h3>
-              <p className="text-foreground/80 text-sm sm:text-base leading-relaxed">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <h3 className="font-semibold text-gray-800 mb-3">Can I bring a plus-one?</h3>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 Plus-one information is specified on your invitation. If you have 
                 questions about your invitation, please contact us directly.
               </p>
             </div>
             
-            <div className="bg-white rounded-xl p-6 shadow-lg">
-              <h3 className="font-semibold text-foreground mb-3">Will there be vegetarian/vegan options?</h3>
-              <p className="text-foreground/80 text-sm sm:text-base leading-relaxed">
+            <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
+              <h3 className="font-semibold text-gray-800 mb-3">Will there be vegetarian/vegan options?</h3>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 Yes! We&apos;ll have various dietary options available. Please let us know 
                 about any specific dietary requirements when you RSVP.
               </p>
@@ -343,19 +343,19 @@ export default function ContactPage() {
           <h2 className="text-3xl sm:text-4xl font-serif font-semibold text-secondary mb-4 sm:mb-6">
             Ready to Celebrate with Us?
           </h2>
-          <p className="text-foreground/85 mb-8 text-sm sm:text-base leading-relaxed">
+          <p className="text-gray-600 mb-8 text-sm sm:text-base leading-relaxed">
             Don&apos;t forget to RSVP and check out all the wedding details.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-md mx-auto">
             <Link 
               href="/rsvp"
-              className="w-full sm:w-auto bg-primary hover:bg-primary-dark text-white px-6 sm:px-8 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="w-full sm:w-auto bg-primary hover:bg-primary-dark focus:bg-primary-dark text-white px-6 sm:px-8 py-3 rounded-full font-medium transition-all duration-300 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
               RSVP Now
             </Link>
             <Link 
               href="/events"
-              className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-white px-6 sm:px-8 py-3 rounded-full font-medium transition-all duration-300"
+              className="w-full sm:w-auto border-2 border-primary text-primary hover:bg-primary hover:text-white focus:bg-primary focus:text-white px-6 sm:px-8 py-3 rounded-full font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             >
               View Events
             </Link>
